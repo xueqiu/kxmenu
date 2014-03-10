@@ -659,7 +659,7 @@ typedef enum {
         [arrowPath addLineToPoint: (CGPoint){arrowX0, arrowY1}];
         [arrowPath addLineToPoint: (CGPoint){arrowXM, arrowY0}];
         
-        [[UIColor colorWithRed:R0 green:G0 blue:B0 alpha:1] set];
+        [[UIColor colorWithRed:R1 green:G1 blue:B1 alpha:1] set];
         
         Y0 += kArrowSize;
         
@@ -693,7 +693,7 @@ typedef enum {
         [arrowPath addLineToPoint: (CGPoint){arrowX1, arrowY1}];
         [arrowPath addLineToPoint: (CGPoint){arrowX0, arrowYM}];
         
-        [[UIColor colorWithRed:R0 green:G0 blue:B0 alpha:1] set];
+        [[UIColor colorWithRed:R1 green:G1 blue:B1 alpha:1] set];
         
         X0 += kArrowSize;
         
@@ -726,7 +726,7 @@ typedef enum {
         
     const CGFloat locations[] = {0, 1};
     const CGFloat components[] = {
-        R0, G0, B0, 1,
+        R1, G1, B1, 1,
         R1, G1, B1, 1,
     };
     
