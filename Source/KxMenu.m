@@ -391,9 +391,9 @@ typedef enum {
     if (!_menuItems.count)
         return nil;
  
-    const CGFloat kMinMenuItemHeight = 32.f;
+    const CGFloat kMinMenuItemHeight = 44.f;
     const CGFloat kMinMenuItemWidth = 32.f;
-    const CGFloat kMarginX = 5.f;
+    const CGFloat kMarginX = 6.f;
     const CGFloat kMarginY = 5.f;
     
     UIFont *titleFont = [KxMenu titleFont];
@@ -436,7 +436,7 @@ typedef enum {
     const CGFloat titleWidth = maxItemWidth - titleX - kMarginX * 2;
     
     UIImage *selectedImage = [KxMenuView selectedImage:(CGSize){maxItemWidth, maxItemHeight + 2}];
-    UIImage *gradientLine = [KxMenuView gradientLine: (CGSize){maxItemWidth - kMarginX * 4, 1}];
+    UIImage *gradientLine = [KxMenuView gradientLine: (CGSize){maxItemWidth - kMarginX * 4, 0.5}];
     
     UIView *contentView = [[UIView alloc] initWithFrame:CGRectZero];
     contentView.autoresizingMask = UIViewAutoresizingNone;
@@ -581,16 +581,13 @@ typedef enum {
 
 + (UIImage *) gradientLine: (CGSize) size
 {
-    const CGFloat locations[5] = {0,0.2,0.5,0.8,1};
+    const CGFloat locations[5] = {0,1};
     
-    const CGFloat R = 0.44f, G = 0.44f, B = 0.44f;
+    const CGFloat R = 0.33f, G = 0.33f, B = 0.33f;
         
-    const CGFloat components[20] = {
-        R,G,B,0.1,
-        R,G,B,0.4,
+    const CGFloat components[8] = {
         R,G,B,0.7,
-        R,G,B,0.4,
-        R,G,B,0.1
+        R,G,B,0.7
     };
     
     return [self gradientImageWithSize:size locations:locations components:components count:5];
