@@ -169,9 +169,9 @@ typedef enum {
         self.opaque = YES;
         self.alpha = 0;
         
-        self.layer.shadowOpacity = 0.5;
-        self.layer.shadowOffset = CGSizeMake(2, 2);
-        self.layer.shadowRadius = 2;
+//        self.layer.shadowOpacity = 0.5;
+//        self.layer.shadowOffset = CGSizeMake(2, 2);
+//        self.layer.shadowRadius = 2;
     }
     
     return self;
@@ -420,7 +420,7 @@ typedef enum {
         const CGSize imageSize = menuItem.image.size;
 
         const CGFloat itemHeight = MAX(titleSize.height, imageSize.height) + kMarginY * 2;
-        const CGFloat itemWidth = ((!menuItem.enabled && !menuItem.image) ? titleSize.width : maxImageWidth + titleSize.width) + kMarginX * 4;
+        const CGFloat itemWidth = ((!menuItem.enabled && !menuItem.image) ? titleSize.width : maxImageWidth + titleSize.width) + kMarginX * 5;
         
         if (itemHeight > maxItemHeight)
             maxItemHeight = itemHeight;
@@ -432,7 +432,7 @@ typedef enum {
     maxItemWidth  = MAX(maxItemWidth, kMinMenuItemWidth);
     maxItemHeight = MAX(maxItemHeight, kMinMenuItemHeight);
 
-    const CGFloat titleX = kMarginX * 2 + maxImageWidth;
+    const CGFloat titleX = kMarginX * 3 + maxImageWidth;
     const CGFloat titleWidth = maxItemWidth - titleX - kMarginX * 2;
     
     UIImage *selectedImage = [KxMenuView selectedImage:(CGSize){maxItemWidth, maxItemHeight + 2}];
