@@ -38,6 +38,7 @@
 
 @property (readwrite, nonatomic, strong) UIImage *image;
 @property (readwrite, nonatomic, strong) NSString *title;
+@property (readwrite, nonatomic, strong) NSObject *userInfo;
 @property (readwrite, nonatomic, weak) id target;
 @property (readwrite, nonatomic) SEL action;
 @property (readwrite, nonatomic, strong) UIColor *foreColor;
