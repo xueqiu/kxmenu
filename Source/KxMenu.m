@@ -393,8 +393,8 @@ typedef enum {
  
     const CGFloat kMinMenuItemHeight = 44.f;
     const CGFloat kMinMenuItemWidth = 32.f;
-    const CGFloat kMarginX = 6.f;
-    const CGFloat kMarginY = 5.f;
+    const CGFloat kMarginX = 4.f;
+    const CGFloat kMarginY = 2.f;
     
     UIFont *titleFont = [KxMenu titleFont];
     if (!titleFont) titleFont = [UIFont boldSystemFontOfSize:16];
@@ -719,12 +719,12 @@ typedef enum {
     const CGRect bodyFrame = {X0, Y0, X1 - X0, Y1 - Y0};
     
     UIBezierPath *borderPath = [UIBezierPath bezierPathWithRoundedRect:bodyFrame
-                                                          cornerRadius:8];
+                                                          cornerRadius:2];
         
     const CGFloat locations[] = {0, 1};
     const CGFloat components[] = {
-        R1, G1, B1, 1,
-        R1, G1, B1, 1,
+        R1, G1, B1, 0.95,
+        R1, G1, B1, 0.95,
     };
     
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
