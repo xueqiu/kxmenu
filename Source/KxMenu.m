@@ -81,6 +81,15 @@ const CGFloat kArrowSize = 12.f;
     }
 }
 
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    if ([[touches.anyObject view] isKindOfClass:[KxMenuOverlay class]]) {
+        [self singleTap:nil];
+    }
+}
+
+
 @end
 
 ////////////////////////////////////////////////////////////////////////////////
